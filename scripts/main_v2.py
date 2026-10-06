@@ -1629,7 +1629,19 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
+    server = node.get("server")
+    port = node.get("server_port")
+    
+    # 安全处理：防止 hy2 端口跳跃节点缺少 server_port 导致崩溃
+    if not server:
+        return None
+    if port is None:
+        if node.get("server_ports"):
+            # 取第一个端口区间的起始端口
+            port = int(str(node["server_ports"][0]).split(":")[0])
+        else:
+            return None
+            
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
