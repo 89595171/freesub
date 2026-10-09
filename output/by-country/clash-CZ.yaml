@@ -14,26 +14,6 @@ proxies:
   skip-cert-verify: true
 - name: 🇨🇿 捷克 (Czech) 02 - xiaohe
   server: 194.87.6.192
-  port: 2097
-  udp: true
-  type: trojan
-  password: gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU
-  sni: ger6.fytpn.com
-  skip-cert-verify: false
-- name: 🇨🇿 捷克 (Czech) 03 - xiaohe
-  server: 188.124.59.124
-  port: 8443
-  udp: true
-  type: vless
-  uuid: c3369c07-f0d2-4a2c-97ab-0d3d47803912
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 1KY_jqa2yPLBEBa-3TG77zs4ak2zQLGul4eexxCueyI
-  servername: github.com
-  client-fingerprint: safari
-- name: 🇨🇿 捷克 (Czech) 04 - xiaohe
-  server: ger6.fytpn.com
   port: 56789
   udp: true
   type: vless
@@ -52,8 +32,6 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
-  - 🇨🇿 捷克 (Czech) 03 - xiaohe
-  - 🇨🇿 捷克 (Czech) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,7 +39,5 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
-  - 🇨🇿 捷克 (Czech) 03 - xiaohe
-  - 🇨🇿 捷克 (Czech) 04 - xiaohe
 rules:
 - MATCH,PROXIES
