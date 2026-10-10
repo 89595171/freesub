@@ -19,14 +19,6 @@ proxies:
   cipher: aes-128-gcm
   password: f9300a9bf39ae0347c3a3bfbc4dd7754
 - name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
-  server: 144.31.212.253
-  port: 443
-  udp: true
-  type: hysteria2
-  password: cf83b611-6cba-4535-adcb-8da06c6a9146
-  sni: 144.31.212.253
-  skip-cert-verify: true
-- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -37,7 +29,15 @@ proxies:
     public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
     short-id: d368b94e275ab080
   servername: www.google.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  server: 144.31.212.253
+  port: 443
+  udp: true
+  type: hysteria2
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: vps155-edge.kermemehori.ru
+  skip-cert-verify: true
 - name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
   server: 144.31.27.215
   port: 43000
@@ -52,6 +52,53 @@ proxies:
   servername: 144.31.27.215
   client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  server: van2.ragnarok-it.xyz
+  port: 8446
+  udp: true
+  type: vless
+  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
+    short-id: 7bac4b112d30d1
+  servername: amd.com
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
+  server: 151.241.137.132
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: finland.ali-bard.online
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
+  server: feow.nomush.ir
+  port: 8388
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: K63q-WhHdJoC_AIxT6E4r_IIuGIb6CuV
+- name: 🇫🇮 芬兰 (Finland) 09 - xiaohe
+  server: drive.korroh.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: ec6f8131-7a5d-4117-9627-6fb2b39ae0da
+  tls: true
+  servername: drive.korroh.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /remote.php/dav/89f7661a0011ce46
+    headers:
+      Host: drive.korroh.com
+- name: 🇫🇮 芬兰 (Finland) 10 - xiaohe
   server: 87.228.92.114
   port: 25481
   udp: true
@@ -66,70 +113,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: 8cb5baa18cd7
-- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  server: 151.241.137.132
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5786d86f-7731-4174-b1a3-84297e54b015
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
-  servername: finland.ali-bard.online
-  client-fingerprint: edge
-- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
-  server: 87.242.94.135
-  port: 8443
-  udp: true
-  type: vless
-  uuid: f23bc4f1-cc71-4003-ae6c-d6abe21d8191
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: y168bU8zcZWat8CcRYRnjCz_L_-OnGvTa4ZZsapmVTQ
-    short-id: 55e5751182be6e90
-  servername: passport.yandex.ru
-  client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 09 - xiaohe
-  server: van2.ragnarok-it.xyz
-  port: 8446
-  udp: true
-  type: vless
-  uuid: a61496c3-f256-4a36-8a52-8638b9cc900a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Y6ZtoxCUW1qFIvLTNfbrsyfCDoIBaRsqGNtbF_mcAXM
-    short-id: 7bac4b112d30d1
-  servername: amd.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 10 - xiaohe
-  server: 87.242.94.90
-  port: 8443
-  udp: true
-  type: vless
-  uuid: f23bc4f1-cc71-4003-ae6c-d6abe21d8191
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pobC1laHCtpMK1EA520CyOpYeel0t90hEV_eRJExFAE
-    short-id: 20272c52657d22da
-  servername: passport.yandex.ru
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 11 - xiaohe
-  server: 65.108.3.59
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -145,7 +128,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 08 - xiaohe
   - 🇫🇮 芬兰 (Finland) 09 - xiaohe
   - 🇫🇮 芬兰 (Finland) 10 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 11 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -161,6 +143,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 08 - xiaohe
   - 🇫🇮 芬兰 (Finland) 09 - xiaohe
   - 🇫🇮 芬兰 (Finland) 10 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 11 - xiaohe
 rules:
 - MATCH,PROXIES
