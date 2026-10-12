@@ -5,6 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
+  server: 104.19.1.115
+  port: 443
+  udp: true
+  type: vless
+  uuid: e285fb9b-ce0a-45ea-84da-4ad64cacd216
+  tls: true
+  servername: app-874a55-219afc.reignssky2.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/dOH03263y00uTucKhyn?ed
+    headers:
+      Host: app-874a55-219afc.reignssky2.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
+  server: 188.114.97.3
+  port: 8443
+  udp: true
+  type: vless
+  uuid: a6fd8b83-7926-4b4e-884b-14f64e578815
+  tls: true
+  servername: dn044toytgxw7ya2rygfhrvpw6mbl.pabjienmi.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/w47aznWVyUF9g3ciQ6GVv?ed=2560
+    headers:
+      Host: dn044toytgxw7ya2rygfhrvpw6mbl.pabjienmi.workers.dev
+- name: 🇨🇿 捷克 (Czech) 03 - xiaohe
   server: 95.85.238.173
   port: 443
   udp: true
@@ -12,7 +42,7 @@ proxies:
   password: c-E0lamG8OnEj9M_uh3oJPmIXqYIVGctO-NHELF1TmNYs7Jl
   sni: cz.h2.cleanersaz.help
   skip-cert-verify: true
-- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
+- name: 🇨🇿 捷克 (Czech) 04 - xiaohe
   server: 195.123.245.241
   port: 443
   udp: true
@@ -32,6 +62,8 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
+  - 🇨🇿 捷克 (Czech) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -39,5 +71,7 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
+  - 🇨🇿 捷克 (Czech) 04 - xiaohe
 rules:
 - MATCH,PROXIES
